@@ -3,7 +3,7 @@
 	Plugin Name: WP-3D-TWITTER-WALL
 	Plugin URI: http://flashapplications.de/?p=423
 	Description: Flash based AS3 3D Twitter Wall shows you the Tweets of an Twitter Search Result
-	Version: 1.1
+	Version: 1.2
 	Author: Jörg Sontag
 	Author URI: http://www.flashapplications.de
 	
