@@ -1,5 +1,5 @@
-=== Plugin Name ===
-Contributors: flashapplications, Joerg Sontag
+=== WP 3D Twitter Wall ===
+Contributors: Flashapplications, Joerg Sontag
 Info: http://flashapplications.de/?p=423
 Tags: twitter, flash, Wall, rss, 3D, feed, plugin, widget, sidebar
 
