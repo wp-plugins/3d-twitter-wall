@@ -3,7 +3,7 @@
 	Plugin Name: WP-3D-TWITTER-WALL
 	Plugin URI: http://flashapplications.de/?p=423
 	Description: Flash based AS3 3D Twitter Wall shows you the Tweets of an Twitter Search Result
-	Version: 1.3
+	Version: 2.0
 	Author: Jörg Sontag
 	Author URI: http://www.flashapplications.de
 	
@@ -30,8 +30,8 @@ if ( !defined('ABSPATH') ){ die(); }
 function wp_3dwall_install () {
 	
     $newoptions = get_option('wp3dwall_options');
-	$newoptions['width'] = '650';
-	$newoptions['height'] = '650';
+	$newoptions['width'] = '800';
+	$newoptions['height'] = '600';
 	$newoptions['media'] = 'Picture Path';
 	$newoptions['tcolor'] = 'ffffff';
 	$newoptions['tcolor2'] = '333333';
@@ -43,8 +43,8 @@ function wp_3dwall_install () {
 	
 	// widget options
 	$widgetoptions = get_option('wp3dwall_widget');
-	$newoptions['width'] = '650';
-	$newoptions['height'] = '650';
+	$newoptions['width'] = '800';
+	$newoptions['height'] = '600';
 	$newoptions['media'] = 'Picture Path';
 	$newoptions['tcolor'] = '333333';
 	$newoptions['tcolor2'] = '333333';
@@ -126,7 +126,9 @@ function wp_3dwall_createflashcode( $widget=false, $atts=NULL ){
 		$flashtag .= 'var '.$soname.' = new SWFObject("'.$movie.'", "3dwall", "'.$options['width'].'", "'.$options['height'].'", "10", "#'.$options['bgcolor'].'");';
 		if( $options['trans'] == 'true' ){
 			$flashtag .= $soname.'.addParam("wmode", "transparent");';
+			
 		}
+		$flashtag .= $soname.'.addParam("allowFullScreen", "true");';
         $flashtag .= $soname.'.addVariable("serverpath", "'.$path.'");';
 		$flashtag .= $soname.'.addVariable("color", "0x'.$options['tcolor'].'");';
         $flashtag .= $soname.'.addVariable("media", "'.$options['media'].'");';
@@ -138,9 +140,11 @@ function wp_3dwall_createflashcode( $widget=false, $atts=NULL ){
 		$flashtag = '<object type="application/x-shockwave-flash" data="'.$movie.'" width="'.$options['width'].'" height="'.$options['height'].'">';
 		$flashtag .= '<param name="movie" value="'.$movie.'" />';
 		$flashtag .= '<param name="bgcolor" value="#'.$options['bgcolor'].'" />';
+		$flashtag .= '<param name="allowFullScreen" value="true" />';
 		$flashtag .= '<param name="AllowScriptAccess" value="always" />';
 		if( $options['trans'] == 'true' ){
 			$flashtag .= '<param name="wmode" value="transparent" />';
+			
 		}
 		$flashtag .= '<param name="flashvars" value="';
                 $flashtag .= 'serverpath='.$path;

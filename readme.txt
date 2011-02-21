@@ -3,8 +3,8 @@ Contributors: Flashapplications, Joerg Sontag
 Info: http://flashapplications.de/?p=423
 Tags: twitter, flash, Wall, rss, 3D, feed, plugin, widget, sidebar
 
-Requires at least: 1.3
-Stable tag: 1.3
+Requires at least: 2.0
+Stable tag: 2.0
 
 Flash based AS3 3D Twitter Wall shows you the Tweets of an Twitter Search Result Requires php5!
 FlashPlayer10
@@ -70,7 +70,11 @@ Allows you to load an Picture.
 * Fixed loading Thumb Bug
 = 1.3 =
 * The Tweet Text is no better displayed
-* The Links in Tweets are now aktive
+* The Links in Tweets are now active
+= 2.0 =
+* Insert a Fullscreen Button
+* Bugfix 
+* Insert a Circle RSS Preloader in the top right to show if the wall start reload rss
 == Upgrade Notice ==
 == Upgrade Notice ==
 -
